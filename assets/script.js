@@ -1,8 +1,8 @@
 
-let arrow = document.querySelector ("arrow_left arrow arrow_right")
+const arrowLeft = document.querySelector ('arrow_left')
+arrowLeft.addEventListener ('click')
 
-console.log (arrow)
-
+console.log ('arrowLeft')
 /* event listener  :
 
 if slide1 et   click arrow right (event target) > slide 2
@@ -13,7 +13,7 @@ if slide 2 et click arrow left (event target) > slide 1
 
 etc...
 
-faisable avec un tableau */
+faisable avec un tableau ? */
 
 const slides = [
 	{
