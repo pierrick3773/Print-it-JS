@@ -1,3 +1,20 @@
+
+let arrow = document.querySelector ("arrow_left arrow arrow_right")
+
+console.log (arrow)
+
+/* event listener  :
+
+if slide1 et   click arrow right (event target) > slide 2
+
+if slide 2 et click arrow right (event target) > slide 3
+
+if slide 2 et click arrow left (event target) > slide 1
+
+etc...
+
+faisable avec un tableau */
+
 const slides = [
 	{
 		"image":"slide1.jpg",
