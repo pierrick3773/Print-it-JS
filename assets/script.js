@@ -1,20 +1,4 @@
 
-const arrowLeft = document.querySelector ('arrow_left')
-arrowLeft.addEventListener ('click')
-
-console.log ('arrowLeft')
-/* event listener  :
-
-if slide1 et   click arrow right (event target) > slide 2
-
-if slide 2 et click arrow right (event target) > slide 3
-
-if slide 2 et click arrow left (event target) > slide 1
-
-etc...
-
-faisable avec un tableau ? */
-
 const slides = [
 	{
 		"image":"slide1.jpg",
@@ -33,3 +17,25 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+console.log(slides);
+
+slides.forEach(function(slides,index) {
+	console.log(slides,index)
+}) /* pour chaque slides on lance la function qui utilise les parametres slides et index
+pour affiché le nom de slide et son index dans le tableau */
+
+const containerDots = document.querySelector('.dots');
+console.log(containerDots)
+const dots = []
+console.log(dots)
+
+const arrowLeft = document.querySelector('.arrow_left');
+arrowLeft.addEventListener('click', function() {
+	console.log('click arrow left');
+});
+const arrowright = document.querySelector('.arrow_right');
+arrowright.addEventListener('click', function() {
+	console.log('click arrow right');
+});
+
+
