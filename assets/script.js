@@ -21,9 +21,25 @@ console.log(slides);
 
 slides.forEach(function(slides,index) {
 	console.log(slides,index)
-}) /* pour chaque slides on lance la function qui utilise les parametres slides et index
+}); /* pour chaque slides on lance la function qui utilise les parametres slides et index
 pour affiché le nom de slide et son index dans le tableau */
 
+let initialIndex = 0;
+
+function loopSlide(index) {
+	if (index < 0) {
+		initialIndex = slides.length -1
+		console.log(slides.length)
+	}
+	else if (index > slides.length -1){
+		initialIndex = 0
+	}
+}
+
+const bannerImg = document.querySelector('.banner-img');
+console.log(bannerImg)
+const bannerTxt = document.querySelector('#banner p');
+console.log(bannerTxt)
 const containerDots = document.querySelector('.dots');
 console.log(containerDots)
 const dots = []
