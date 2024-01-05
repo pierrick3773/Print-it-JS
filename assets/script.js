@@ -26,7 +26,7 @@ pour affiché le nom de slide et son index dans le tableau */
 
 let initialIndex = 0;
 
-function loopSlide(index) {
+function loopSlide(index) /* fonction qui gère la boucle du caroussel */ {
 	if (index < 0) {
 		initialIndex = slides.length -1
 		console.log(slides.length)
@@ -34,8 +34,20 @@ function loopSlide(index) {
 	else if (index > slides.length -1){
 		initialIndex = 0
 	}
+	bannerImg.src = `./assets/images/slideshow/${slides[initialIndex].image}`; /* appel de la bonne image en fonction de la place dans le tableau */
+	bannerTxt.innerHTML = slides[initialIndex].tagLine; /* appel du bon texte en fonction de la place dans le tableau */
 }
+ function nextSlide() {
+	initialIndex++
+	loopSlide(initialIndex)
+	nextDots()
+ }
 
+ function previousSlide() {
+	initialIndex--
+	loopSlide(initialIndex)
+	nextDots()
+ }
 const bannerImg = document.querySelector('.banner-img');
 console.log(bannerImg)
 const bannerTxt = document.querySelector('#banner p');
@@ -46,12 +58,8 @@ const dots = []
 console.log(dots)
 
 const arrowLeft = document.querySelector('.arrow_left');
-arrowLeft.addEventListener('click', function() {
-	console.log('click arrow left');
-});
+arrowLeft.addEventListener('click',previousSlide)
 const arrowright = document.querySelector('.arrow_right');
-arrowright.addEventListener('click', function() {
-	console.log('click arrow right');
-});
+arrowright.addEventListener('click',nextSlide);
 
 
