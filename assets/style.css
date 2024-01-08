@@ -131,15 +131,16 @@ header {
 	grid-template-rows: 1fr;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
+	justify-items: center;
 }
 #banner .arrow_left {
-	left: 10px;
+
 	grid-area: 1 / 1 / 2 / 2;
 }
 #banner .arrow_right {
-	right: 10px;
+
 	grid-area: 1 / 3 / 2 / 4;
-	position: absolute;
+
 }
 /* Gestion des points du carrousel */
 .dots {

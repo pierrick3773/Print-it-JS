@@ -62,4 +62,13 @@ arrowLeft.addEventListener('click',previousSlide)
 const arrowright = document.querySelector('.arrow_right');
 arrowright.addEventListener('click',nextSlide);
 
+const dotsContainer = document.querySelector('.dots');
+slides.forEach(function(slide, index) {
+	const dot = document.createElement('span'); /* pourquoi je ne créer pas les span dans mon html directement ?*/ 
+	dot.classList.add('dot');
+	dotsContainer.appendChild(dot)
+	dots.push(dot)
+});
 
+/* pourquoi toute la partie au dessus permet de juste afficher les dots ?
+pourquoi ils ne s'affichent pas directement avec le html et le css déjà créer ? */
