@@ -52,8 +52,6 @@ const bannerImg = document.querySelector('.banner-img');
 console.log(bannerImg)
 const bannerTxt = document.querySelector('#banner p');
 console.log(bannerTxt)
-const containerDots = document.querySelector('.dots');
-console.log(containerDots)
 const dots = []
 console.log(dots)
 
@@ -64,11 +62,18 @@ arrowright.addEventListener('click',nextSlide);
 
 const dotsContainer = document.querySelector('.dots');
 slides.forEach(function(slide, index) {
-	const dot = document.createElement('span'); /* pourquoi je ne créer pas les span dans mon html directement ?*/ 
+	const dot = document.createElement('span');
 	dot.classList.add('dot');
 	dotsContainer.appendChild(dot)
 	dots.push(dot)
 });
 
-/* pourquoi toute la partie au dessus permet de juste afficher les dots ?
-pourquoi ils ne s'affichent pas directement avec le html et le css déjà créer ? */
+function nextDots(){
+	dots.forEach(function(dot){
+				dot.classList.remove('dot_selected');
+			});
+	dots[initialIndex].classList.add('dot_selected') ; /* ajouter du dot_selected sur l'index en cours ? */
+		}
+	
+nextDots()/* pourquoi celle là c'est la seule que j'appelle simplement comme ça ? ? */
+
